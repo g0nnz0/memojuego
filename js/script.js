@@ -21,4 +21,12 @@ function reparteTarjetas() {
   });
 }
 
+function descubrir() {
+  this.classList.add("descubierta");
+}
+
 reparteTarjetas();
+
+document.querySelectorAll(".tarjeta").forEach(function (elemento) {
+  elemento.addEventListener("click", descubrir);
+});
