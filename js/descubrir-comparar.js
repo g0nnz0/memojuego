@@ -16,6 +16,7 @@ function descubrir() {
   }
 
   comparar(descubiertas);
+  actualizaContador();
 }
 
 function comparar(tarjetasAComparar) {
