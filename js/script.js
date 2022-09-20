@@ -2,12 +2,23 @@ var grupoTarjetas = ["🎈", "🎆", "🎇", "🧨", "✨", "🎉", "🎊", "�
 
 var totalTarjetas = grupoTarjetas.concat(grupoTarjetas);
 
+function barajaTarjetas() {
+  var resultado;
+  resultado = totalTarjetas.sort(() => {
+    return 0.5 - Math.random();
+  });
+
+  return resultado;
+}
+
 function reparteTarjetas() {
   var mesa = document.querySelector("#mesa");
 
+  var tarjetasBarajadas = barajaTarjetas();
+
   mesa.innerHTML = "";
 
-  totalTarjetas.forEach(function (elemento) {
+  tarjetasBarajadas.forEach(function (elemento) {
     var tarjeta = document.createElement("div");
 
     tarjeta.innerHTML =
