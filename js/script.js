@@ -36,24 +36,44 @@ function reparteTarjetas() {
 
 function descubrir() {
   var descubiertas;
-  var totalDescubiertas = document.querySelectorAll(".descubierta");
+  var totalDescubiertas = document.querySelectorAll(
+    ".descubierta:not(.acertada)"
+  );
   if (totalDescubiertas.length > 1) {
     return;
   }
 
   this.classList.add("descubierta");
 
-  var descubiertas = document.querySelectorAll(".descubierta");
+  var descubiertas = document.querySelectorAll(".descubierta:not(.acertada)");
 
   if (descubiertas.length < 2) {
     return;
   }
 
-  if (descubiertas[0].dataset.valor === descubiertas[1].dataset.valor) {
-    console.log("acierto");
+  comparar(descubiertas);
+}
+
+function comparar(tarjetasAComparar) {
+  if (
+    tarjetasAComparar[0].dataset.valor === tarjetasAComparar[1].dataset.valor
+  ) {
+    acierto(tarjetasAComparar);
   } else {
-    console.log("error");
+    error(tarjetasAComparar);
   }
+}
+
+function acierto(lasTarjetas) {
+  lasTarjetas.forEach(function (elemento) {
+    elemento.classList.add("acertada");
+  });
+}
+
+function error(lasTarjetas) {
+  lasTarjetas.forEach(function (elemento) {
+    elemento.classList.remove("descubierta");
+  });
 }
 
 reparteTarjetas();

@@ -66,3 +66,7 @@ main {
   position: absolute;
   display: flex;
 }
+
+.acertada {
+  opacity: 0;
+}
