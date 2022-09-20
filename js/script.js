@@ -22,7 +22,9 @@ function reparteTarjetas() {
     var tarjeta = document.createElement("div");
 
     tarjeta.innerHTML =
-      "<div class='tarjeta'>" +
+      "<div class='tarjeta' data-valor=" +
+      elemento +
+      ">" +
       "<div class='tarjeta__contenido'>" +
       elemento +
       "</div>" +
@@ -33,7 +35,25 @@ function reparteTarjetas() {
 }
 
 function descubrir() {
+  var descubiertas;
+  var totalDescubiertas = document.querySelectorAll(".descubierta");
+  if (totalDescubiertas.length > 1) {
+    return;
+  }
+
   this.classList.add("descubierta");
+
+  var descubiertas = document.querySelectorAll(".descubierta");
+
+  if (descubiertas.length < 2) {
+    return;
+  }
+
+  if (descubiertas[0].dataset.valor === descubiertas[1].dataset.valor) {
+    console.log("acierto");
+  } else {
+    console.log("error");
+  }
 }
 
 reparteTarjetas();
