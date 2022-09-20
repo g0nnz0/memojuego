@@ -2,6 +2,40 @@ body {
   font-size: 2rem;
   display: flex;
   flex-direction: column;
+  position: relative;
+}
+
+.bienvenida {
+  display: none;
+  /*display: flex;*/
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 1;
+}
+
+.bienvenida h1 {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  font-size: 5rem;
+  margin-top: 0;
+}
+
+.bienvenida-botones {
+  display: flex;
+}
+
+.bienvenida button {
+  padding: 1rem 3rem;
+  margin: 0 1rem;
+  min-width: 20rem;
 }
 
 .cabecera {
@@ -11,14 +45,6 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-}
-
-.contadores {
-  display: flex;
-}
-
-.contador-item {
-  margin-right: 2rem;
 }
 
 .cabecera-titulo {
@@ -37,6 +63,14 @@ body {
   font-weight: 400;
   font-size: 3.5rem;
   line-height: 0.9;
+}
+
+.contadores {
+  display: flex;
+}
+
+.contador-item {
+  margin-right: 2rem;
 }
 
 main {
@@ -144,6 +178,24 @@ main {
   animation: error 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
 }
 
+.sube-nivel,
+.game-over,
+.end-game {
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: var(--gradient);
+}
+
+.sube-nivel.visible,
+.game-over.visible,
+.end-game.visible {
+  display: flex;
+}
+
 .modal {
   background: white;
   padding: 3rem 3rem 1rem;
@@ -200,4 +252,8 @@ button:focus {
   font-family: var(--font);
   font-size: 1rem;
   margin: 0;
+}
+
+.sonido {
+  display: none;
 }

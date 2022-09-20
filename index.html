@@ -15,13 +15,36 @@
     <title>MemoMonsters</title>
   </head>
   <body>
+    <header class="cabecera">
+      <div class="contadores">
+        <div class="contador-item">
+          <h4 class="cabecera-titulo">Movimientos</h4>
+          <div class="cabecera-num">
+            <span id="mov">00</span>/<span id="mov-total">00</span>
+          </div>
+        </div>
+        <div class="contador-item">
+          <h4 class="cabecera-titulo">Tiempo</h4>
+          <div class="cabecera-num">
+            <span id="minutos">00</span>:<span id="segundos">00</span>
+          </div>
+        </div>
+      </div>
+    </header>
     <main>
       <div id="mesa" class="mesa"></div>
+      <div id="feedback" class="feedback">
+        <div class="modal">
+          <h2>¡Bien Hecho!</h2>
+          <button id="reiniciar" class="reiniciar">¿Reiniciar?</button>
+        </div>
+      </div>
     </main>
     <script src="js/variables-globales.js"></script>
     <script src="js/baraja-reparte.js"></script>
     <script src="js/descubrir-comparar.js"></script>
     <script src="js/acierto-error.js"></script>
+    <script src="js/cronometro.js"></script>
     <script src="js/iniciar.js"></script>
   </body>
 </html>
