@@ -1,4 +1,8 @@
+var modoRelax = false;
+
 var movimientos = 0;
+
+var cronometro;
 
 var grupoTarjetas = [
   ["🎈", "🎆"],

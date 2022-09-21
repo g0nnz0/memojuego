@@ -3,7 +3,6 @@ function iniciarCronometro() {
   var minutos = 1;
   var segundosTexto;
   var minutosTexto;
-  var cronometro;
 
   function actualizarContador() {
     segundos--;
@@ -16,6 +15,7 @@ function iniciarCronometro() {
       segundos = 0;
       minutos = 0;
       clearInterval(cronometro);
+      timeOver();
     }
 
     segundosTexto = segundos;
