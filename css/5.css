@@ -144,6 +144,38 @@ main {
   animation: error 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
 }
 
+.sube-nivel,
+.game-over,
+.end-game {
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: var(--gradient);
+}
+
+.sube-nivel.visible,
+.game-over.visible,
+.end-game.visible {
+  display: flex;
+}
+
+.feedback {
+  opacity: 0;
+}
+
+.win-color {
+  background-color: chocolate;
+}
+
+.visible {
+  opacity: 100%;
+  position: absolute;
+  align-self: center;
+}
+
 .modal {
   background: white;
   padding: 3rem 3rem 1rem;
