@@ -233,3 +233,7 @@ button:focus {
   font-size: 1rem;
   margin: 0;
 }
+
+.sonido {
+  display: none;
+}
