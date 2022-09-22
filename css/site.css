@@ -7,6 +7,7 @@
   --gradient: linear-gradient(35deg, var(--orange), var(--hotpink));
 }
 
+/*fix del bug que no me dejaba ver los niveles*/
 * {
   box-sizing: border-box;
 }
