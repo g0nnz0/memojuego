@@ -9,6 +9,7 @@ function iniciar() {
 
   document.querySelector(".selecciona-nivel").classList.remove("visible");
   document.querySelector("#endGame").classList.remove("visible");
+  document.querySelector("#timeOver").classList.remove("visible");
   document.querySelector("#gameOver").classList.remove("visible");
   document.querySelector("#subeNivel").classList.remove("visible");
 

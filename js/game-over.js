@@ -4,5 +4,5 @@ function gameOver() {
 }
 
 function timeOver() {
-  document.querySelector("#timeOver").add("visible");
+  document.querySelector("#timeOver").classList.add("visible");
 }
